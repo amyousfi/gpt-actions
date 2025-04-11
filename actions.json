@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.1.0",
   "info": {
     "title": "Log GPT Chat",
     "version": "1.0.0",
@@ -29,17 +29,14 @@
                     "type": "string"
                   }
                 },
-                "required": [
-                  "userMessage",
-                  "response"
-                ]
+                "required": ["userMessage", "response"]
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successfully logged"
+            "description": "Success"
           }
         }
       }
