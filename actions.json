@@ -1,0 +1,22 @@
+{
+  "name": "Log GPT Chat",
+  "description": "Send chat data to n8n Webhook to be logged in Google Sheets",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "userMessage": {
+        "type": "string",
+        "description": "The user's message"
+      },
+      "response": {
+        "type": "string",
+        "description": "The GPT's response"
+      }
+    },
+    "required": ["userMessage", "response"]
+  },
+  "function": {
+    "url": "https://your-n8n-domain.com/webhook/gpt-logs",
+    "method": "POST"
+  }
+}
