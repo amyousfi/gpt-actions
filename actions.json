@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Log GPT Chat",
+    "title": "MatchAI Startup Logger",
     "version": "1.0.0",
-    "description": "Send chat data to n8n Webhook to be logged in Google Sheets"
+    "description": "Logs startup details from MatchAI GPT to n8n + Google Sheets"
   },
   "servers": [
     {
@@ -13,8 +13,8 @@
   "paths": {
     "/webhook-test/gpt-logs": {
       "post": {
-        "operationId": "logChat",
-        "summary": "Log a GPT chat to n8n",
+        "operationId": "logStartupDetails",
+        "summary": "Log full startup profile to n8n",
         "requestBody": {
           "required": true,
           "content": {
@@ -22,21 +22,59 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "userMessage": {
+                  "startupName": {
                     "type": "string"
                   },
-                  "response": {
+                  "website": {
                     "type": "string"
+                  },
+                  "founderName": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "phone": {
+                    "type": "string"
+                  },
+                  "industry": {
+                    "type": "string"
+                  },
+                  "stage": {
+                    "type": "string"
+                  },
+                  "fundingSought": {
+                    "type": "string"
+                  },
+                  "revenueARR": {
+                    "type": "string"
+                  },
+                  "valuation": {
+                    "type": "string"
+                  },
+                  "burnRate": {
+                    "type": "string"
+                  },
+                  "runwayMonths": {
+                    "type": "string"
+                  },
+                  "pitchDeckUploaded": {
+                    "type": "boolean"
                   }
                 },
-                "required": ["userMessage", "response"]
+                "required": [
+                  "startupName",
+                  "founderName",
+                  "industry",
+                  "stage"
+                ]
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Startup details logged"
           }
         }
       }
