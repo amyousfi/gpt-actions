@@ -29,14 +29,17 @@
                     "type": "string"
                   }
                 },
-                "required": ["userMessage", "response"]
+                "required": [
+                  "userMessage",
+                  "response"
+                ]
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Successfully logged"
           }
         }
       }
