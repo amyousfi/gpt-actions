@@ -16,7 +16,7 @@
     "required": ["userMessage", "response"]
   },
   "function": {
-    "url": "https://your-n8n-domain.com/webhook/gpt-logs",
+    "url": "https://shv.app.n8n.cloud/webhook-test/gpt-logs",
     "method": "POST"
   }
 }
