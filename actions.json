@@ -11,7 +11,7 @@
     }
   ],
   "paths": {
-    "/webhook-test/gpt-logs": {
+    "/webhook/gpt-logs": {
       "post": {
         "operationId": "logStartupDetails",
         "summary": "Log full startup profile to n8n",
